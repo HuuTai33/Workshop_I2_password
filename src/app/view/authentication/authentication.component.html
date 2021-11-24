@@ -1,0 +1,13 @@
+<div class="header">
+  <span class="title">Connexion</span>
+</div>
+
+<div class="content">
+  <input type="text" [(ngModel)]="email" placeholder="Adresse e-mail*">
+  <input type="password" [(ngModel)]="password" placeholder="Mot de passe*">
+
+  <div *ngIf="error" style="text-align: center; color: red;">{{error}}</div>
+
+  <button mat-flat-button class="button-submit" (click)="submit()"
+          [attr.disabled]="email == '' || password == '' ? '' : null"><span class="text">Je me connecte</span></button>
+</div>

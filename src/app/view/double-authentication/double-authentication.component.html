@@ -1,0 +1,12 @@
+<div class="header">
+  <span class="title">Double authentificaton</span>
+</div>
+
+<div class="content">
+  <input type="password" [(ngModel)]="password" placeholder="Mot de passe*">
+
+  <div *ngIf="error" style="text-align: center; color: red;">{{error}}</div>
+
+  <button mat-flat-button class="button-submit" (click)="submit()"
+          [attr.disabled]="password == '' ? '' : null"><span class="text">Je me connecte</span></button>
+</div>
