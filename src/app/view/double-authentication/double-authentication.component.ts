@@ -22,7 +22,7 @@ export class DoubleAuthenticationComponent implements OnInit {
 
   ngOnInit(): void {
     this.passwordService.getPassword().subscribe(data => {
-      this.goodPassword = data;
+      this.goodPassword = data.password;
       console.log(this.goodPassword);
     });
   }
